@@ -1,0 +1,64 @@
+#include<stdio.h>
+#include<stdlib.h>
+
+int main(){
+	 int habt,pontt,habt2,pontt2;
+	 float pib,km,pib2,km2,denpo,denpo2,pibpc,pibpc2;
+	 char est , estado[30],codcart[3],est2,estado2[30],codcart2[3];
+	 
+	 printf("Escolha uma letra de A a H para o seu estado: ");
+	 scanf("%c",&est);
+	 printf("Escolha um numero de 01 a 04 para o codigo : ");
+	 scanf("%s",&codcart);
+	 printf("Digite o numero de habitantes: ");
+	 scanf("%d",&habt);
+	 printf("Digite o numero de pontos turisticos: ");
+	 scanf("%d",&pontt);
+	 printf("Digite o nome do estado:");
+	 scanf("%s",&estado);
+	 printf("Digite o km do estado:");
+	 scanf("%f",&km);
+	 printf("Digite o pib do estado:");
+	 scanf("%f",&pib);
+	 denpo = habt/km;
+	 pibpc = pib/habt;
+	 
+	 printf("\nCarta:1\n");
+	 printf("Estado:%c",est);
+	 printf("Codigo:%s\n",codcart);
+	 printf("Nome:%s\n",estado);
+	 printf("Km:%2.2f\n",km);
+	 printf("Pontos turisticos:%d\n",pontt);
+	 printf("Habitantes:%d\n",habt);
+	 printf("PIB:%2.2f\n",pib);
+	 printf("Densidade populacional:%f \n",denpo);
+	 printf("Pib por capta:%f\n",pibpc);
+	 
+	  printf("Escolha uma letra de A a H para o seu estado: ");
+	 scanf("%c",&est2);
+	 printf("Escolha um numero de 01 a 04 para o codigo : ");
+	 scanf("%s",&codcart2);
+	 printf("Digite o numero de habitantes: ");
+	 scanf("%d",&habt2);
+	 printf("Digite o numero de pontos turisticos: ");
+	 scanf("%d",&pontt2);
+	 printf("Digite o nome do estado:");
+	 scanf("%s",&estado2);
+	 printf("Digite o km do estado:");
+	 scanf("%f",&km2);
+	 printf("Digite o pib do estado:");
+	 scanf("%f",&pib2);
+	 denpo2 = habt2/km2;
+	 pibpc2 = pib2/habt2;
+	 
+	 printf("\nCarta:2\n");
+	 printf("Estado:%c",est2);
+	 printf("Codigo:%s\n",codcart2);
+	 printf("Nome:%s\n",estado2);
+	 printf("Km:%2.2f\n",km2);
+	 printf("Pontos turisticos:%d\n",pontt2);
+	 printf("Habitantes:%d\n",habt2);
+	 printf("PIB:%2.2f\n",pib2);
+	 printf("Densidade populacional:%f \n",denpo2);
+	  printf("Pib por capta:%f\n",pibpc2);
+}

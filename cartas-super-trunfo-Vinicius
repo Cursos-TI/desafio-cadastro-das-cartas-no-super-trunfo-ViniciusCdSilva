@@ -3,7 +3,7 @@
 
 int main(){
 	 int habt,pontt,habt2,pontt2;
-	 float pib,km,pib2,km2,denpo,denpo2,pibpc,pibpc2;
+	 float pib,km,pib2,km2,denpo,denpo2,pibpc,pibpc2,super,super2;
 	 char est , estado[30],codcart[3],est2,estado2[30],codcart2[3];
 	 
 	 printf("Escolha uma letra de A a H para o seu estado: ");
@@ -17,7 +17,7 @@ int main(){
 	 printf("Digite o nome do estado:");
 	 scanf("%s",&estado);
 	 printf("Digite o km do estado:");
-	 scanf("%f",&km);
+	 scanf("%f",&km); 
 	 printf("Digite o pib do estado:");
 	 scanf("%f",&pib);
 	 denpo = habt/km;
@@ -60,5 +60,48 @@ int main(){
 	 printf("Habitantes:%d\n",habt2);
 	 printf("PIB:%2.2f\n",pib2);
 	 printf("Densidade populacional:%f \n",denpo2);
-	  printf("Pib por capta:%f\n",pibpc2);
+	 printf("Pib por capta:%f\n",pibpc2);
+	 
+	 super = habt+km+pib+pontt-denpo+pibpc;
+	 super2 =habt2+km2+pib2+pontt2-denpo2+pibpc2;
+	 
+	printf("\nComparação de Cartas: \n");
+	if(habt>habt2){
+		printf("Populacao:Carta1 venceu \n");
+	}else{
+		printf("Populacao:Carta2 venceu \n");
+	}
+	if(km > km2){
+	   printf("Area:Carta1 venceu \n");
+	}else{
+		 printf("Area:Carta2 venceu \n");
+	}
+	if(pib > pib2){
+		printf("Pib:Carta1 venceu \n");
+	}else{
+		printf("Pib:Carta2 venceu \n");
+	}
+	if(pontt > pontt2 ){
+		printf("Pontos Turisticos: Carta1 venceu \n");
+	}else{
+		printf("Pontos Turisticos: Carta2 venceu \n");
+	}
+	if(denpo < denpo2){
+		printf("Densidade populacional:Carta1 venceu\n");
+	}else{
+		printf("Densidade populacional:Carta2 venceu\n");
+	}
+	if(pibpc > pibpc2){
+		printf("PIB per Capita:Carta1 venceu\n");
+	}else{
+		printf("PIB per Capita:Carta2 venceu \n");
+	}
+	if(super > super2){
+		printf("Super:Carta1 venceu \n");
+	}else{
+		printf("Super:carta2 venceu ");
+	}
+	
+	
+	
 }

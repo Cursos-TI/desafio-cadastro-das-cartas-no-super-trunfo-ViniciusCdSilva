@@ -1,0 +1,272 @@
+#include<stdio.h>
+#include<stdlib.h>
+
+int main(){
+	 int habt,pontt,habt2,pontt2,escolha,contagem=0,escolha2;
+	 float pib,km,pib2,km2,denpo,denpo2,pibpc,pibpc2,super,super2;
+	 char est , estado[30],codcart[3],est2,estado2[30],codcart2[3];
+	 
+	 printf("Escolha uma letra de A a H para o seu estado: ");
+	 scanf("%c",&est);
+	 printf("Escolha um numero de 01 a 04 para o codigo : ");
+	 scanf("%s",&codcart);
+	 printf("Digite o numero de habitantes: ");
+	 scanf("%d",&habt);
+	 printf("Digite o numero de pontos turisticos: ");
+	 scanf("%d",&pontt);
+	 printf("Digite o nome do estado:");
+	 scanf("%s",&estado);
+	 printf("Digite o km do estado:");
+	 scanf("%f",&km); 
+	 printf("Digite o pib do estado:");
+	 scanf("%f",&pib);
+	 denpo = habt/km;
+	 pibpc = pib/habt;
+	 
+	 printf("\nCarta:1\n");
+	 printf("Estado:%c",est);
+	 printf("Codigo:%s\n",codcart);
+	 printf("Nome:%s\n",estado);
+	 printf("Km:%2.2f\n",km);
+	 printf("Pontos turisticos:%d\n",pontt);
+	 printf("Habitantes:%d\n",habt);
+	 printf("PIB:%2.2f\n",pib);
+	 printf("Densidade populacional:%f \n",denpo);
+	 printf("Pib por capta:%f\n",pibpc);
+	 
+	  printf("Escolha uma letra de A a H para o seu estado: ");
+	 scanf("%c",&est2);
+	 printf("Escolha um numero de 01 a 04 para o codigo : ");
+	 scanf("%s",&codcart2);
+	 printf("Digite o numero de habitantes: ");
+	 scanf("%d",&habt2);
+	 printf("Digite o numero de pontos turisticos: ");
+	 scanf("%d",&pontt2);
+	 printf("Digite o nome do estado:");
+	 scanf("%s",&estado2);
+	 printf("Digite o km do estado:");
+	 scanf("%f",&km2);
+	 printf("Digite o pib do estado:");
+	 scanf("%f",&pib2);
+	 denpo2 = habt2/km2;
+	 pibpc2 = pib2/habt2;
+	 
+	 printf("\nCarta:2\n");
+	 printf("Estado:%c",est2);
+	 printf("Codigo:%s\n",codcart2);
+	 printf("Nome:%s\n",estado2);
+	 printf("Km:%2.2f\n",km2);
+	 printf("Pontos turisticos:%d\n",pontt2);
+	 printf("Habitantes:%d\n",habt2);
+	 printf("PIB:%2.2f\n",pib2);
+	 printf("Densidade populacional:%f \n",denpo2);
+	 printf("Pib por capta:%f\n",pibpc2);
+	 
+	 super = habt+km+pib+pontt-denpo+pibpc;
+	 super2 =habt2+km2+pib2+pontt2-denpo2+pibpc2;
+	 
+	 printf("\nEscolha uma opção para comparação");
+	 printf("1 Populacao\n");
+	 printf("2 Area\n");
+	 printf("3 Pib\n");
+	 printf("4 Ponto turisticos\n");
+	 printf("5 Dencidade populacional\n");
+	 printf("6 Pib per capita\n");
+	 printf("7 Super\n");
+	 scanf("%d",&escolha);
+	 
+	 printf("\nEscolha mais uma opção para comparação");
+	 printf("1 Populacao\n");
+	 printf("2 Area\n");
+	 printf("3 Pib\n");
+	 printf("4 Ponto turisticos\n");
+	 printf("5 Dencidade populacional\n");
+	 printf("6 Pib per capita\n");
+	 printf("7 Super\n");
+	 scanf("%d",&escolha2);
+	 while( escolha == escolha2){
+	 	printf("As comparacoes sao iguais");
+	 	printf("\nEscolha mais uma opção para comparação");
+	 printf("1 Populacao\n");
+	 printf("2 Area\n");
+	 printf("3 Pib\n");
+	 printf("4 Ponto turisticos\n");
+	 printf("5 Dencidade populacional\n");
+	 printf("6 Pib per capita\n");
+	 printf("7 Super\n");
+	 scanf("%d",&escolha2);
+	 	
+	 }
+	 
+	 do{
+	 
+	 switch(escolha){
+	 	
+	case 1:
+	if(habt>habt2){
+		printf("Paises %s X %s",estado,estado2);
+		printf("Comparacao:Populacao");
+		printf("Valores: %d X %d",habt,habt2);
+		printf("População:Carta1 venceu \n");
+		contagem++ ;
+		escolha = escolha2;
+	}else if(habt<habt2){
+		printf("Paises %s X %s",estado,estado2);
+		printf("Comparacao:Populacao");
+		printf("Valores: %d X %d",habt,habt2);
+		printf("População:Carta2 venceu \n");
+		escolha = escolha2;
+		contagem++ ;
+	}else{
+		printf("Paises %s X %s",estado,estado2);
+		printf("Comparacao:Populacao");
+		printf("Valores: %d X %d",habt,habt2);
+		printf("População:Empate\n");
+		escolha = escolha2;
+	    contagem++ ;}
+	break;
+	case 2:
+	if(km > km2){
+		printf("Paises %s X %s",estado,estado2);
+		printf("Comparacao:Area");
+		printf("Valores: %f X %f",km,km2);
+	    printf("Area:Carta1 venceu \n");
+	    escolha = escolha2;
+	    contagem++ ;
+	}else if(km < km2){
+		printf("Paises %s X %s",estado,estado2);
+		printf("Comparacao:Area");
+		printf("Valores: %f X %f",km,km2);
+		printf("Area:Carta2 venceu \n");
+		escolha = escolha2;
+		contagem++ ;
+	}else{
+		printf("Paises %s X %s",estado,estado2);
+		printf("Comparacao:Area");
+		printf("Valores: %f X %f",km,km2);
+		printf("Area:Carta2 Empate \n");
+		escolha = escolha2;
+		contagem++ ;
+	}
+	break;
+	
+	case 3 :
+	if(pib > pib2){
+		printf("Paises %s X %s \n",estado,estado2);
+		printf("Comparacao:Pib \n");
+		printf("Valores: %f X %f \n",pib,pib2);
+		printf("Pib:Carta1 venceu \n");
+		escolha = escolha2;
+	     contagem++ ;
+	}else if(pib<pib2){
+		printf("Paises %s X %s\n",estado,estado2);
+		printf("Comparacao:Area\n");
+		printf("Valores: %f X %f \n",pib,pib2);
+		printf("Pib:Carta2 venceu \n");
+		escolha = escolha2;
+		contagem++ ;
+	}else{
+		printf("Paises %s X %s\n",estado,estado2);
+		printf("Comparacao:Area \n");
+		printf("Valores: %f X %f \n",pib,pib2);
+		printf("Pib:Empate \n");
+		escolha = escolha2;
+		contagem++ ;
+	}break;
+	case 4:
+	if(pontt > pontt2 ){
+		printf("Paises %s X %s \n",estado,estado2);
+		printf("Comparacao:Pontos Turisticos \n");
+		printf("Valores: %d X %d \n",pontt,pontt2);
+		printf("Pontos Turisticos: Carta1 venceu \n");
+		escolha = escolha2;	
+		contagem++ ;
+	}else if( pontt < pontt2){
+		printf("Paises %s X %s \n",estado,estado2);
+		printf("Comparacao:Pontos Turisticos \n");
+		printf("Valores: %d X %d \n",pontt,pontt2);
+		printf("Pontos Turisticos: Carta2 venceu \n");
+		escolha = escolha2;
+		contagem++ ;
+	}else{
+		printf("Paises %s X %s\n",estado,estado2);
+		printf("Comparacao:Pontos Turisticos\n");
+		printf("Valores: %d X %d \n",pontt,pontt2);
+		printf("Pontos Turisticos: Empate \n");
+		escolha = escolha2;
+		contagem++ ;
+	}break;
+	case 5:
+	if(denpo < denpo2){
+		printf("Paises %s X %s \n",estado,estado2);
+		printf("Comparacao:Dencidade populacional \n");
+		printf("Valores: %f X %f \n",denpo,denpo2);
+		printf("Densidade populacional:Carta1 venceu\n");
+		escolha = escolha2;
+		contagem++ ;
+	}else if(denpo > denpo2){
+		printf("Paises %s X %s\n",estado,estado2);
+		printf("Comparacao:Dencidade populacional\n");
+		printf("Valores: %f X %f\n",denpo,denpo2);
+		printf("Densidade populacional:Carta2 venceu\n\n");
+		escolha = escolha2;
+		contagem++ ;
+	} else{
+		printf("Paises %s X %s\n",estado,estado2);
+		printf("Comparacao:Dencidade populacional\n");
+		printf("Valores: %f X %f\n",denpo,denpo2);
+		printf("Densidade populacional:Empate\n");
+		escolha = escolha2;
+		contagem++ ;
+		}break;
+	case 6:
+	if(pibpc > pibpc2){
+		printf("Paises %s X %s\n",estado,estado2);
+		printf("Comparacao:Pib per capita\n");
+		printf("Valores: %f X %f\n",pibpc,pibpc2);
+		printf("PIB per Capita:Carta1 venceu\n");
+		escolha = escolha2;
+		contagem++ ;
+	}else if(pibpc<pibpc2){
+		printf("Paises %s X %s\n",estado,estado2);
+		printf("Comparacao:Pib per capita\n");
+		printf("Valores: %f X %f\n",pibpc,pibpc2);
+		printf("PIB per Capita:Carta2 venceu \n");
+		escolha = escolha2;
+		contagem++ ;
+	}else{
+		printf("Paises %s X %s\n",estado,estado2);
+		printf("Comparacao:Pib per capita\n");
+		printf("Valores: %f X %f\n",pibpc,pibpc2);
+		printf("PIB per Capita:Empate \n");
+		escolha = escolha2;
+		contagem++ ;
+	}break;
+	case 7:
+	if(super > super2){
+		printf("Paises %s X %s",estado,estado2);
+		printf("Comparacao:Super\n");
+		printf("Valores: %f X %f\n",super,super2);
+		printf("Super:Carta1 venceu \n");
+		escolha = escolha2;
+		contagem++ ;
+	}else if(super<super2){
+		printf("Paises %s X %s\n",estado,estado2);
+		printf("Comparacao:Super\n");
+		printf("Valores: %f X %f\n",super,super2);
+		printf("Super:carta2 venceu ");
+		escolha = escolha2;
+		contagem++ ;
+	}else{
+		printf("Paises %s X %s\n",estado,estado2);
+		printf("Comparacao:Super\n");
+		printf("Valores: %f X %f\n",super,super2);
+		printf("Super:Empate \n");
+		escolha = escolha2;
+		contagem++ ;
+	}
+}
+}while(contagem <= 2);
+	
+	
+}
